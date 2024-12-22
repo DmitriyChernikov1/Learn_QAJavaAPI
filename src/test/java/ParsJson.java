@@ -8,7 +8,9 @@ public class ParsJson {
         Response response = RestAssured
                 .get("https://playground.learnqa.ru/api/get_json_homework")
                 .andReturn();
-        response.print();
+
+        String secondMessage = response.jsonPath().getString("messages[1]");
+        System.out.println(secondMessage);
 
     }
 }
