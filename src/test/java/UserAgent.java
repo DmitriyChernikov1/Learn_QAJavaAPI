@@ -8,23 +8,36 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class UserAgent {
+public class UserAgent{
 
     // Список User-Agent и ожидаемых значений
     private static final Object[][] userAgents = {
+
+            // Новый User-Agent 1
             {
-                    "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/537.36",
-                    "iOS", "Safari", "mobile"
+                    "Mozilla/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build/ICL53F) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+                    "Android", "No", "Mobile"
             },
+            // Новый User-Agent 2
             {
-                    "Mozilla/5.0 (Android 10; Mobile; rv:79.0) Gecko/79.0 Firefox/79.0",
-                    "Android", "Firefox", "mobile"
+                    "Mozilla/5.0 (iPad; CPU OS 13_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/91.0.4472.77 Mobile/15E148 Safari/604.1",
+                    "iOS", "Chrome", "Mobile"
             },
+            // Новый User-Agent 3
             {
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-                    "Unknown", "Chrome", "web"
+                    "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+                    "Unknown", "Unknown", "Googlebot"
+            },
+            // Новый User-Agent 4
+            {
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36 Edg/91.0.100.0",
+                    "No", "Chrome", "Web"
+            },
+            // Новый User-Agent 5
+            {
+                    "Mozilla/5.0 (iPad; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",
+                    "iPhone", "No", "Mobile"
             }
-            // Добавьте остальные User-Agent и ожидаемые значения из списка по ссылке
     };
 
     @Test
