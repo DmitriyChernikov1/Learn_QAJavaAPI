@@ -82,6 +82,7 @@ public class UserAgent{
         } else {
             System.out.println("Все User-Agent верны.");
         }
+
     }
 
     // Метод отправки GET-запроса с заголовком User-Agent
